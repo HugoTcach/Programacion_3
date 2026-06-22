@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Mi Carrito</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍕 Food Store</div>
+    <nav>
+      <a href="/src/pages/store/home/index.html">Inicio</a>
+      <a href="/src/pages/client/orders/index.html">Mis Pedidos</a>
+      <a href="/src/pages/store/cart/index.html" class="active">🛒 Carrito <span id="cart-badge" class="badge-count">0</span></a>
+      <span id="user-name-display" class="user-name"></span>
+      <button id="logout-btn" class="btn-secondary">Cerrar Sesión</button>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h2>Mi Carrito</h2>
+    
+    <div id="empty-cart-msg" class="empty-state" style="display: none;">
+      <p>Tu carrito está vacío.</p>
+      <button class="btn-primary mt-1" onclick="window.location.href='/src/pages/store/home/index.html'" style="max-width: 200px;">Volver a la tienda</button>
+    </div>
+
+    <div id="cart-content" class="cart-layout" style="display: none;">
+      <div class="cart-items" id="cart-items-container">
+        </div>
+      
+      <div class="cart-summary">
+        <h3>Resumen del Pedido</h3>
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="summary-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Envío:</span>
+          <span>$500.00</span>
+        </div>
+        <hr>
+        <div class="summary-row total-row">
+          <span>Total:</span>
+          <span id="summary-total">$0.00</span>
+        </div>
+        <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 1.5rem;">Los pedidos se realizan directamente en el local.</p>
+        <button id="btn-confirm-order" class="btn-primary" style="margin-bottom: 0.5rem;">Confirmar Pedido</button>
+        <button id="btn-empty-cart" class="btn-secondary" style="width: 100%; color: #dc2626; border: 1px solid #dc2626; background: transparent;">Vaciar Carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./cart.ts"></script>
+</body>
+</html>

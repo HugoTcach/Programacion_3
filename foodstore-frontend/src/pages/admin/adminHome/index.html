@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Store - Admin Dashboard</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="admin-body" style="display: none;">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Administración<br><small>Panel de control</small></div>
+      <nav class="admin-nav">
+        <a href="/src/pages/admin/adminHome/index.html" class="active">📊 Dashboard</a>
+        <a href="/src/pages/admin/categories/index.html">📁 Categorías</a>
+        <a href="/src/pages/admin/products/index.html">🍔 Productos</a>
+        <a href="/src/pages/admin/orders/index.html">📦 Pedidos</a>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <a href="/src/pages/store/home/index.html">🏪 Ver Tienda</a>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <h2>Panel de Administración</h2>
+        <div class="admin-user-info">
+          <span id="admin-name">Admin</span>
+          <button id="logout-btn" class="btn-secondary">Cerrar Sesión</button>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        <div class="stat-cards">
+          <div class="stat-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h3>Categorías</h3>
+            <p id="stat-cat">0</p>
+            <button onclick="window.location.href='/src/pages/admin/categories/index.html'">Gestionar</button>
+          </div>
+          <div class="stat-card" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);">
+            <h3>Productos</h3>
+            <p id="stat-prod">0</p>
+            <button onclick="window.location.href='/src/pages/admin/products/index.html'">Gestionar</button>
+          </div>
+          <div class="stat-card" style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);">
+            <h3>Pedidos</h3>
+            <p id="stat-ord">0</p>
+            <button onclick="window.location.href='/src/pages/admin/orders/index.html'">Gestionar</button>
+          </div>
+          <div class="stat-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+            <h3>Disponibles</h3>
+            <p id="stat-disp">0</p>
+            <button onclick="window.location.href='/src/pages/admin/products/index.html'">Revisar stock</button>
+          </div>
+        </div>
+
+        <div class="admin-panel mt-2">
+          <h3>📊 Resumen Rápido</h3>
+          <div class="quick-summary">
+            <div class="summary-item">
+              <span>💰 Ingresos Totales</span>
+              <strong id="stat-revenue">$0.00</strong>
+            </div>
+            <div class="summary-item">
+              <span>⏳ Pedidos Pendientes</span>
+              <strong id="stat-pending">0</strong>
+            </div>
+            <div class="summary-item">
+              <span>🍳 En Preparación</span>
+              <strong id="stat-prep">0</strong>
+            </div>
+            <div class="summary-item">
+              <span>✅ Completados</span>
+              <strong id="stat-completed">0</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./adminHome.ts"></script>
+</body>
+</html>

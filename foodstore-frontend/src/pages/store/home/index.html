@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Catálogo</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍕 Food Store</div>
+    <nav>
+      <a href="/src/pages/store/home/index.html" class="active">Inicio</a>
+      <a href="/src/pages/client/orders/index.html">Mis Pedidos</a>
+      <a href="/src/pages/store/cart/index.html">🛒 Carrito <span id="cart-badge">0</span></a>
+      <span id="user-name-display" class="user-name"></span>
+      <button id="logout-btn" class="btn-secondary">Cerrar Sesión</button>
+    </nav>
+  </header>
+
+  <div class="store-layout">
+    <aside class="sidebar">
+      <h3>Categorías</h3>
+      <ul id="category-list">
+        <li><button class="cat-btn active" data-id="all">Todos los Productos</button></li>
+        </ul>
+    </aside>
+
+    <main class="catalog-content">
+      <div class="catalog-header">
+        <h2 id="current-category-title">Todos los Productos</h2>
+        <div class="filters">
+          <input type="text" id="search-input" placeholder="Buscar producto..." />
+          <select id="sort-select">
+            <option value="default">Ordenar por...</option>
+            <option value="name-asc">Nombre A-Z</option>
+            <option value="name-desc">Nombre Z-A</option>
+            <option value="price-asc">Menor Precio</option>
+            <option value="price-desc">Mayor Precio</option>
+          </select>
+        </div>
+        <p id="product-count" class="text-muted">0 productos encontrados</p>
+      </div>
+
+      <div id="product-grid" class="product-grid">
+        </div>
+    </main>
+  </div>
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>

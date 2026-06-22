@@ -1,0 +1,27 @@
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# --- Configuración de Java / Gradle ---
+# Carpetas de compilación y caché
+FoodStore/.gradle/
+FoodStore/build/
+# Carpetas de IDE (por si usas IntelliJ o VSCode)
+FoodStore/.idea/
+FoodStore/.vscode/
+# Base de datos H2 (es un archivo generado)
+FoodStore/data/jpa_db.mv.db
+FoodStore/*.log
+
+# --- Configuración de Frontend / Node ---
+# Dependencias (nunca se suben al repo)
+foodstore-frontend/node_modules/
+# Carpetas de salida de compilación
+foodstore-frontend/dist/
+foodstore-frontend/.vite/
+foodstore-frontend/.output/
+# Logs de error y debug
+foodstore-frontend/*.log
+
+# --- Ignorar base de datos ---
+data/

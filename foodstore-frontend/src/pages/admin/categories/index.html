@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Store - Gestión de Categorías</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="admin-body" style="display: none;">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Administración<br><small>Panel de control</small></div>
+      <nav class="admin-nav">
+        <a href="/src/pages/admin/adminHome/index.html">📊 Dashboard</a>
+        <a href="/src/pages/admin/categories/index.html" class="active">📁 Categorías</a>
+        <a href="/src/pages/admin/products/index.html">🍔 Productos</a>
+        <a href="/src/pages/admin/orders/index.html">📦 Pedidos</a>
+      </nav>
+      <div class="admin-sidebar-footer">
+        <a href="/src/pages/store/home/index.html">🏪 Ver Tienda</a>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <h2>Gestión de Categorías</h2>
+        <div class="admin-user-info">
+          <span id="admin-name">Admin</span>
+          <button id="logout-btn" class="btn-secondary">Cerrar Sesión</button>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        <div class="admin-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <h3>Listado de Categorías</h3>
+            <button id="btn-add-category" class="btn-primary" style="width: auto;">+ Nueva Categoría</button>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Descripción</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="category-tbody">
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="category-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <h3 id="modal-title" style="margin-bottom: 1.5rem;">Nueva Categoría</h3>
+      <form id="category-form">
+        <input type="hidden" id="cat-id" />
+        <div class="form-group">
+          <label for="cat-nombre">Nombre</label>
+          <input type="text" id="cat-nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="cat-desc">Descripción</label>
+          <input type="text" id="cat-desc" required />
+        </div>
+        <div class="action-buttons" style="margin-top: 2rem;">
+          <button type="submit" class="btn-primary">Guardar</button>
+          <button type="button" class="btn-secondary" id="btn-cancel-modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./categories.ts"></script>
+</body>
+</html>
