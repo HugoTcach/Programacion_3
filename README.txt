@@ -4,7 +4,7 @@ Proyecto final (Fase 1) para la materia Programación 3. Sistema de comercio ele
 
 ## 🔗 Enlaces de Entrega
 
-* **Video Demostración:** [Insertar enlace público a YouTube/Drive aquí]
+* **Video Demostración:** https://drive.google.com/file/d/1rIA8YPCzLNVNLiIr6cCBkrndOiPqs2uW/view?usp=sharing
 * **Documentación Técnica:** https://github.com/HugoTcach/Programacion_3.git
 
 ## 🛠 Tecnologías Utilizadas
